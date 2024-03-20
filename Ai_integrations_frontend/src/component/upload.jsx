@@ -142,21 +142,12 @@ function Upload() {
             sectionToShow === "TEXT"
               ? "bg-slate-700 text-rose-50"
               : " bg-slate-50 text-gray-950"
-          } cursor-pointer inline p-3 rounded-tl-lg rounded-bl-lg border border-gray-800 border-solid`}
+          } cursor-pointer inline p-3 rounded border-gray-800 border-solid`}
           onClick={() => handleSection("TEXT")}
         >
           Text File
         </div>
-        <div
-          className={`${
-            sectionToShow === "AUDIO"
-              ? "bg-slate-700 text-rose-50"
-              : "bg-slate-50 text-gray-950"
-          } cursor-pointer inline p-3 rounded-tr-lg rounded-br-lg border border-gray-800 border-solid`}
-          onClick={() => handleSection("AUDIO")}
-        >
-          Audio File
-        </div>
+     
       </div>
 
       {sectionToShow === "TEXT" ? (

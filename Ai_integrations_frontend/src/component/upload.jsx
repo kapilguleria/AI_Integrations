@@ -4,7 +4,7 @@ import axios from "../utils/axiosConfig";
 
 function Upload() {
   const [file, setFile] = useState(null);
-  const [sectionToShow, setSectionToShow] = useState("TEXT");
+  const [sectionToShow, setSectionToShow] = useState("AUDIO");
   const [resultData, setResultData] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -137,22 +137,13 @@ function Upload() {
       <h2 className="my-4 text-3xl font-bold"> Upload file to convert</h2>
 
       <div className="w-fit border my-3">
-        <div
-          className={`${
-            sectionToShow === "TEXT"
-              ? "bg-slate-700 text-rose-50"
-              : " bg-slate-50 text-gray-950"
-          } cursor-pointer inline p-3 rounded-tl-lg rounded-bl-lg border border-gray-800 border-solid`}
-          onClick={() => handleSection("TEXT")}
-        >
-          Text File
-        </div>
+       
         <div
           className={`${
             sectionToShow === "AUDIO"
               ? "bg-slate-700 text-rose-50"
               : "bg-slate-50 text-gray-950"
-          } cursor-pointer inline p-3 rounded-tr-lg rounded-br-lg border border-gray-800 border-solid`}
+          } cursor-pointer inline p-3 rounded border-gray-800 border-solid`}
           onClick={() => handleSection("AUDIO")}
         >
           Audio File
